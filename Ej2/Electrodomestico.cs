@@ -9,9 +9,9 @@ namespace Ej2
 {
     internal class Electrodomestico
     {
-        public const Double PRECIO_BASE = 100, PESO = 5;
-        public const Colores COLORES = Colores.BLANCO;
-        public const Char CONSUMO = 'F';
+        private const Double PRECIO_BASE = 100, PESO = 5;
+        private const Colores COLORES = Colores.BLANCO;
+        private const Char CONSUMO = 'F';
 
         public Double PrecioBase { get; set; } = PRECIO_BASE;
         public Colores Colorado{ get; set; } = COLORES;
@@ -29,12 +29,12 @@ namespace Ej2
             this.Peso = Peso;
         }
 
-        public Electrodomestico(double PrecioBase, Colores Colorado, char Consumo, double Peso)
+        public Electrodomestico(Double PrecioBase, Colores Colorado, Char Consumo, Double Peso)
         {
-            PrecioBase = PrecioBase;
-            Colorado = ComprobarColor(Colorado);
-            Consumo = ComprobarConsumoEnergia(Consumo);
-            Peso = Peso;
+            this.PrecioBase = PrecioBase;
+            this.Colorado = ComprobarColor(Colorado);
+            this.Consumo = ComprobarConsumoEnergia(Consumo);
+            this.Peso = Peso;
         }
 
         public Char ComprobarConsumoEnergia(Char Letra)
